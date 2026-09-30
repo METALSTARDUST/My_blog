@@ -1,0 +1,4 @@
+interface:
+  display_name: "Domain Enums"
+  short_description: "Centralize finite domain values and behavior"
+  default_prompt: "Use $domain-enums to model this finite domain set without magic strings."

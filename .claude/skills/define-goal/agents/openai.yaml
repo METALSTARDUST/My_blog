@@ -1,0 +1,4 @@
+interface:
+  display_name: "Define Goal"
+  short_description: "Turn vague work into measurable goals"
+  default_prompt: "Use $define-goal to turn this request into a concrete, measurable objective before starting."
