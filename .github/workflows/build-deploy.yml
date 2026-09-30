@@ -1,0 +1,55 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissões mínimas exigidas pelo deploy no GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Só um deploy por vez; um novo push cancela o anterior.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+
+      # O site fica em https://metalstardust.github.io/My_blog/
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /My_blog
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  # Só publica quando o push é na main (PRs apenas validam o build).
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
