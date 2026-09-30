@@ -55,17 +55,40 @@ npm run format
 
 O deploy é automático: todo push na `main` roda o GitHub Actions e publica no GitHub Pages em https://metalstardust.github.io/My_blog/
 
+A base ainda usa Next.js 14. A auditoria de dependências aponta avisos no Next.js
+e no PostCSS transitivo; a atualização de versão fica pendente. O destino desta
+versão é o export estático (`out/`), sem servidor Next.js em produção.
+
 ## 🗺️ Roadmap
 
 - [x] Peça 1 — Projeto Next.js, layout dark, pastas de posts e deploy no GitHub Pages
-- [ ] Peça 2 — Render dos posts em Markdown
-- [ ] Peça 3 — Busca full-text
-- [ ] Peça 4 — Tags e categorias
+- [x] Peça 2 — Render dos posts em Markdown
+- [x] Peça 3 — Busca full-text local em tempo real
+- [x] Peça 4 — Tags nos registros e filtro por categoria
 - [ ] Peça 5 — Script CLI para novos posts (`npm run new:post`)
 - [ ] Peça 6 — Imagens e personagens
 - [ ] Peça 7 — Otimização e docs finais
 
-## 📄 Licença
+## Escrevendo no diário
+
+Copie `content/template.md` para `content/posts/<categoria>/AAAA-MM-DD-titulo.md`.
+Preencha título, data entre aspas no formato `YYYY-MM-DD`, resumo e tags. A categoria
+do frontmatter deve corresponder à pasta. Enquanto `published: false`, o post fica
+fora do site e da busca; mude para `true` quando estiver pronto.
+
+O primeiro registro é um exemplo identificado como tal, para revisar e substituir.
+Os posts são ordenados por data, com tempo estimado de leitura. Markdown aceita
+listas, links, blocos de código e tabelas; HTML embutido não é executado.
+
+As páginas `/sobre/` e `/projetos/` apresentam o Metal e seu trabalho. A busca na home
+consulta títulos, resumos, tags e conteúdo, ignorando maiúsculas e acentos. O índice
+é o conteúdo público carregado no build: para atualizar, gere um novo deploy.
+
+Referência de direção: [blog do TG Marinho](https://github.com/tgmarinho/tgmarinho-ai-blog),
+pela combinação de blog pessoal e diário de construção. A implementação mantém a
+identidade Metal Sonic e o deploy estático deste projeto.
+
+## Licença do código
 
 MIT — use os aprendizados à vontade, só cite a fonte. 🤘
 

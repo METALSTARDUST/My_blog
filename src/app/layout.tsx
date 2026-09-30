@@ -22,8 +22,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // A classe "dark" fica fixa no <html>: o blog não tem toggle de tema.
     <html lang="pt-BR" className="dark">
       <body className="flex min-h-screen flex-col">
+        <a
+          href="#conteudo"
+          className="sr-only focus:not-sr-only focus:p-4 focus:text-sonic-cyan"
+        >
+          Pular para o conteúdo
+        </a>
         <Header />
-        <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
+        <main
+          id="conteudo"
+          className="mx-auto w-full max-w-6xl flex-1 px-5 sm:px-8"
+        >
           {children}
         </main>
         <Footer />

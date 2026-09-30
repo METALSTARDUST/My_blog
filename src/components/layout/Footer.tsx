@@ -4,7 +4,7 @@ import { REPO_URL } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-dark-border bg-dark-card">
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-2 px-4 py-6 text-sm text-dark-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 py-8 text-xs text-dark-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <p>
           Feito por <span className="text-sonic-cyan">Metal</span> (Caio Lima da
           Silva) com ajuda de IA.
