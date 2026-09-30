@@ -10,6 +10,7 @@ Sempre que editar o `README.md`, preserve as duas imagens de moldura:
 Nunca remova, troque de lugar ou inverta essas imagens.
 
 O README também deve sempre manter:
+
 - Uma seção explicando as **referências a Sonic/cultura pop** (o dono é grande fã de Sonic; personagem favorito: **Metal Sonic**) para ninguém estranhar.
 - Uma seção avisando que **tudo é feito com ajuda de IA**: o dono só digita (descreve) e revisa o código.
 

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode é fixo: o fundo e o texto base vêm sempre da paleta escura. */
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-dark-bg text-dark-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-sonic-cyan/30;
+  }
+}
