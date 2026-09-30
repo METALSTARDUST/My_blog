@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implementação com Guardrails"
+  short_description: "Guardrails para implementação segura"
+  default_prompt: "Use $implementacao-com-guardrails para implementar esta mudança com padrões locais e evidências."
