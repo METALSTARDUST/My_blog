@@ -8,7 +8,7 @@
 
 Blog pessoal onde eu, **Caio Lima da Silva (Metal)**, registro tudo que aprendo no dia a dia: código, dicas, erros, projetos e reflexões. É ao mesmo tempo minha referência pessoal e um lugar para ajudar outros devs em jornada parecida.
 
-Trabalho como developer (único T.I) na **VGR Gestão Contábil**, curso **ADS (Análise e Desenvolvimento de Sistemas)** na Uniderp e moro em Campo Grande-MS. 🇧🇷
+Trabalho como developer na **VGR Gestão Contábil**, curso **ADS (Análise e Desenvolvimento de Sistemas)** na Uniderp e moro em Campo Grande-MS. 🇧🇷
 
 ## 🦔 Por que tanta referência a Sonic?
 
