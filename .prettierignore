@@ -5,3 +5,5 @@ package-lock.json
 docs/images
 .agents
 .claude
+.playwright-cli
+output/playwright
