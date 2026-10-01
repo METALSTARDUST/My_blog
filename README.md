@@ -25,7 +25,7 @@ Sou **vibe coder** e amo automatização. **Tudo aqui é feito com a ajuda de IA
 - **Frontend**: Next.js 14 + TypeScript + Tailwind CSS
 - **Posts**: Markdown com frontmatter YAML (title, date, tags, category, summary)
 - **Qualidade**: ESLint + Prettier
-- **Deploy**: GitHub Pages (automático a cada push na `main`)
+- **Deploy**: Cloudflare Workers (assets estáticos)
 - **Busca**: índice gerado em build time
 - **Dark mode**: sempre ativo, sem toggle
 
@@ -53,9 +53,7 @@ npm run lint
 npm run format
 ```
 
-O deploy é automático: todo push na `main` roda o GitHub Actions e publica no GitHub Pages em https://metalstardust.github.io/My_blog/
-
-O blog também está na Cloudflare (Workers com assets estáticos): https://my-blog.metalstardust.workers.dev
+O blog está na Cloudflare (Workers com assets estáticos): https://my-blog.metalstardust.workers.dev
 
 ```bash
 npx wrangler login          # só na primeira vez
@@ -68,7 +66,7 @@ versão é o export estático (`out/`), sem servidor Next.js em produção.
 
 ## 🗺️ Roadmap
 
-- [x] Peça 1 — Projeto Next.js, layout dark, pastas de posts e deploy no GitHub Pages
+- [x] Peça 1 — Projeto Next.js, layout dark, pastas de posts e deploy na Cloudflare
 - [x] Peça 2 — Render dos posts em Markdown
 - [x] Peça 3 — Busca full-text local em tempo real
 - [x] Peça 4 — Tags nos registros e filtro por categoria
