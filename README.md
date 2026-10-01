@@ -55,6 +55,13 @@ npm run format
 
 O deploy é automático: todo push na `main` roda o GitHub Actions e publica no GitHub Pages em https://metalstardust.github.io/My_blog/
 
+O blog também está na Cloudflare (Workers com assets estáticos): https://my-blog.metalstardust.workers.dev
+
+```bash
+npx wrangler login          # só na primeira vez
+npm run deploy:cloudflare   # build + deploy do out/
+```
+
 A base ainda usa Next.js 14. A auditoria de dependências aponta avisos no Next.js
 e no PostCSS transitivo; a atualização de versão fica pendente. O destino desta
 versão é o export estático (`out/`), sem servidor Next.js em produção.
