@@ -1,0 +1,11 @@
+{
+  // Blog estático: o Wrangler só envia a pasta `out/` (gerada por `npm run build`).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-blog",
+  "compatibility_date": "2026-09-30",
+  "assets": {
+    "directory": "./out",
+    // Páginas inexistentes devolvem o 404.html gerado pelo Next.
+    "not_found_handling": "404-page",
+  },
+}
