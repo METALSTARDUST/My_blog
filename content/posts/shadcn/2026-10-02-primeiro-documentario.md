@@ -2,7 +2,7 @@
 title: "Primeiro documentário"
 date: "2026-10-02"
 tags: ["daily", "aprendizado", "ia", "vibe-coding"]
-category: "pessoal"
+category: "shadcn"
 summary: "Meu primeiro dia documentando o que aprendo: vocabulário técnico, desenvolvimento com IA e a vontade de compartilhar essa jornada com outros devs."
 published: true
 ---
