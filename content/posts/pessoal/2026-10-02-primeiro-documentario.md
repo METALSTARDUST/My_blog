@@ -23,6 +23,10 @@ Por aqui, vou falar sobre minha experiência como **vibe coder**, aprendizado co
 
 Sempre que usar um conteúdo como referência, vou deixar o link no final do registro. Assim, quem quiser poderá consultar a fonte, aprofundar o assunto e tirar as próprias conclusões. Este é o meu primeiro save point público: um lugar para guardar os aprendizados e seguir para a próxima fase acompanhado de quem também está aprendendo.
 
+## Continue o documentário
+
+[Próxima página: Componentes →](/documentario/componentes/)
+
 ## Referências
 
 - [Documentação do shadcn/ui — introdução](https://ui.shadcn.com/docs)

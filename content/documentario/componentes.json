@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Accordion",
+    "description": "Um conjunto de títulos interativos empilhados verticalmente. Cada título revela uma seção de conteúdo."
+  },
+  {
+    "name": "Alert",
+    "description": "Exibe um aviso para chamar a atenção do usuário."
+  },
+  {
+    "name": "Alert Dialog",
+    "description": "Um diálogo modal que interrompe o usuário com conteúdo importante e espera uma resposta."
+  },
+  {
+    "name": "Aspect Ratio",
+    "description": "Exibe conteúdo dentro de uma proporção desejada."
+  },
+  {
+    "name": "Attachment",
+    "description": "Exibe um arquivo ou imagem anexada, com mídia, metadados, estado de upload e ações."
+  },
+  {
+    "name": "Avatar",
+    "description": "Uma imagem que representa o usuário, com uma alternativa de exibição quando a imagem não está disponível."
+  },
+  { "name": "Badge", "description": "Exibe um selo ou uma etiqueta." },
+  {
+    "name": "Breadcrumb",
+    "description": "Exibe o caminho até o recurso atual usando uma hierarquia de links."
+  },
+  {
+    "name": "Bubble",
+    "description": "Exibe conteúdo de conversa em uma bolha de mensagem. Suporta variantes, alinhamento, agrupamento, reações e conteúdo que pode ser expandido ou recolhido."
+  },
+  {
+    "name": "Button",
+    "description": "Exibe um botão ou um componente com aparência de botão."
+  },
+  {
+    "name": "Button Group",
+    "description": "Um contêiner que agrupa botões relacionados com estilo consistente."
+  },
+  {
+    "name": "Calendar",
+    "description": "Um calendário que permite ao usuário selecionar uma data ou um intervalo de datas."
+  },
+  {
+    "name": "Card",
+    "description": "Exibe um cartão com cabeçalho, conteúdo e rodapé."
+  },
+  {
+    "name": "Carousel",
+    "description": "Um carrossel com movimento e suporte a gestos de deslizar, construído com Embla."
+  },
+  {
+    "name": "Chart",
+    "description": "Gráficos construídos com Recharts, com código que pode ser copiado e adaptado aos seus aplicativos."
+  },
+  {
+    "name": "Checkbox",
+    "description": "Um controle que permite ao usuário alternar entre marcado e desmarcado."
+  },
+  {
+    "name": "Collapsible",
+    "description": "Um componente interativo que expande ou recolhe um painel."
+  },
+  {
+    "name": "Combobox",
+    "description": "Um campo de entrada com preenchimento automático e uma lista de sugestões."
+  },
+  {
+    "name": "Command",
+    "description": "Um menu de comandos para busca e ações rápidas."
+  },
+  {
+    "name": "Context Menu",
+    "description": "Exibe um menu de ações acionado pelo clique com o botão direito do mouse."
+  },
+  {
+    "name": "Data Table",
+    "description": "Tabelas e grades de dados construídas com TanStack Table."
+  },
+  {
+    "name": "Date Picker",
+    "description": "Um seletor de datas com suporte a intervalos e atalhos predefinidos."
+  },
+  {
+    "name": "Dialog",
+    "description": "Uma janela sobreposta à janela principal ou a outro diálogo, deixando o conteúdo abaixo sem interação."
+  },
+  {
+    "name": "Direction",
+    "description": "Um componente provedor que define a direção do texto no aplicativo."
+  },
+  {
+    "name": "Drawer",
+    "description": "Um componente de gaveta: um painel deslizante para React."
+  },
+  {
+    "name": "Dropdown Menu",
+    "description": "Exibe um menu de ações ou funções, acionado por um botão."
+  },
+  {
+    "name": "Empty",
+    "description": "Exibe um estado vazio, como uma área que ainda não tem conteúdo."
+  },
+  {
+    "name": "Field",
+    "description": "Combina rótulos, controles e textos de ajuda para compor campos de formulário acessíveis e entradas agrupadas."
+  },
+  {
+    "name": "Hover Card",
+    "description": "Permite que usuários que enxergam visualizem antecipadamente o conteúdo disponível por trás de um link."
+  },
+  {
+    "name": "Input",
+    "description": "Um campo de texto para formulários e entrada de dados, com estilo e recursos de acessibilidade integrados."
+  },
+  {
+    "name": "Input Group",
+    "description": "Adiciona complementos, botões e conteúdo auxiliar aos campos de entrada."
+  },
+  {
+    "name": "Input OTP",
+    "description": "Um campo acessível para códigos de uso único, como códigos de verificação, com suporte a copiar e colar."
+  },
+  {
+    "name": "Item",
+    "description": "Um componente versátil para exibir conteúdo com mídia, título, descrição e ações."
+  },
+  {
+    "name": "Kbd",
+    "description": "Exibe representações de teclas ou entradas do teclado."
+  },
+  {
+    "name": "Label",
+    "description": "Exibe um rótulo acessível associado a um controle."
+  },
+  {
+    "name": "Marker",
+    "description": "Exibe um status em linha, uma nota do sistema, uma linha com borda ou um separador rotulado em uma conversa."
+  },
+  {
+    "name": "Menubar",
+    "description": "Um menu que permanece visível, comum em aplicativos de desktop, com acesso rápido a um conjunto consistente de comandos."
+  },
+  {
+    "name": "Message",
+    "description": "Exibe uma mensagem em uma conversa, com avatar opcional, cabeçalho, rodapé e alinhamento."
+  },
+  {
+    "name": "Message Scroller",
+    "description": "Um contêiner de rolagem de chat que mantém as falas ancoradas, abre transcrições salvas, acompanha respostas em streaming, carrega o histórico sem saltos na tela e permite ir até qualquer mensagem."
+  },
+  {
+    "name": "Native Select",
+    "description": "Um elemento HTML select nativo estilizado, integrado ao sistema de design."
+  },
+  {
+    "name": "Navigation Menu",
+    "description": "Uma coleção de links para navegação em sites."
+  },
+  {
+    "name": "Pagination",
+    "description": "Navegação entre páginas, com links para a próxima página e a anterior."
+  },
+  {
+    "name": "Popover",
+    "description": "Exibe conteúdo em uma camada sobre a página, acionada por um botão."
+  },
+  {
+    "name": "Progress",
+    "description": "Exibe o progresso de conclusão de uma tarefa, geralmente como uma barra de progresso."
+  },
+  {
+    "name": "Questionnaire",
+    "description": "Um questionário em múltiplas etapas, com perguntas de escolha única, múltipla escolha, texto livre e perguntas que podem ser puladas.",
+    "isNew": true
+  },
+  {
+    "name": "Radio Group",
+    "description": "Um conjunto de botões de opção em que apenas um pode estar marcado por vez."
+  },
+  {
+    "name": "Resizable",
+    "description": "Painéis e layouts redimensionáveis e acessíveis, com suporte ao teclado."
+  },
+  {
+    "name": "Scroll Area",
+    "description": "Amplia a rolagem nativa para permitir uma aparência personalizada e consistente entre navegadores."
+  },
+  {
+    "name": "Select",
+    "description": "Exibe uma lista de opções para o usuário escolher, acionada por um botão."
+  },
+  {
+    "name": "Separator",
+    "description": "Separa conteúdo visual ou semanticamente."
+  },
+  {
+    "name": "Sheet",
+    "description": "Estende o componente Dialog para exibir conteúdo que complementa o conteúdo principal da tela."
+  },
+  {
+    "name": "Sidebar",
+    "description": "Uma barra lateral que pode ser composta e personalizada."
+  },
+  {
+    "name": "Skeleton",
+    "description": "Exibe uma representação provisória do conteúdo enquanto ele está carregando."
+  },
+  {
+    "name": "Slider",
+    "description": "Um controle em que o usuário seleciona um valor dentro de um intervalo."
+  },
+  { "name": "Spinner", "description": "Um indicador de carregamento." },
+  {
+    "name": "Switch",
+    "description": "Um controle que permite alternar entre ligado e desligado."
+  },
+  { "name": "Table", "description": "Um componente de tabela responsivo." },
+  {
+    "name": "Tabs",
+    "description": "Um conjunto de seções de conteúdo organizadas em abas, exibidas uma de cada vez."
+  },
+  {
+    "name": "Textarea",
+    "description": "Exibe uma área de texto de formulário ou um componente com essa aparência."
+  },
+  {
+    "name": "Toast",
+    "description": "Uma mensagem breve exibida temporariamente."
+  },
+  {
+    "name": "Toggle",
+    "description": "Um botão de dois estados que pode estar ligado ou desligado."
+  },
+  {
+    "name": "Toggle Group",
+    "description": "Um conjunto de botões de dois estados que podem ser ligados ou desligados."
+  },
+  {
+    "name": "Tooltip",
+    "description": "Uma pequena janela com informações sobre um elemento, exibida quando ele recebe foco pelo teclado ou quando o mouse passa sobre ele."
+  },
+  {
+    "name": "Typography",
+    "description": "Estilos para títulos, parágrafos, listas e outros elementos de texto."
+  }
+]
