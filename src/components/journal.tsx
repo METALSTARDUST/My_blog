@@ -7,6 +7,11 @@ import { CATEGORIES } from "@/lib/site";
 import type { Post } from "@/lib/posts";
 import { formatDate } from "@/lib/date";
 
+// Dicas que aparecem ao passar o mouse (ou focar) no filtro da categoria.
+const CATEGORY_HINTS: Record<string, string> = {
+  shadcn: "shadcn traduzido para pt-BR",
+};
+
 function normalize(value: string) {
   return value
     .normalize("NFD")
@@ -58,17 +63,31 @@ export function Journal({ posts }: { posts: Post[] }) {
         className="mb-8 flex flex-wrap gap-2"
         aria-label="Filtrar por categoria"
       >
-        {["todos", ...CATEGORIES].map((item) => (
-          <button
-            key={item}
-            type="button"
-            aria-pressed={category === item}
-            onClick={() => setCategory(item)}
-            className={`rounded-md border px-3 py-2 text-xs capitalize transition-colors ${category === item ? "border-sonic-cyan/40 bg-sonic-cyan/10 text-sonic-cyan" : "border-dark-border text-dark-muted hover:border-sonic-cyan/40 hover:text-dark-text"}`}
-          >
-            {item}
-          </button>
-        ))}
+        {["todos", ...CATEGORIES].map((item) => {
+          const hint = CATEGORY_HINTS[item];
+          return (
+            <div key={item} className="group relative">
+              <button
+                type="button"
+                aria-pressed={category === item}
+                aria-describedby={hint ? `dica-${item}` : undefined}
+                onClick={() => setCategory(item)}
+                className={`rounded-md border px-3 py-2 text-xs capitalize transition-colors ${category === item ? "border-sonic-cyan/40 bg-sonic-cyan/10 text-sonic-cyan" : "border-dark-border text-dark-muted hover:border-sonic-cyan/40 hover:text-dark-text"}`}
+              >
+                {item}
+              </button>
+              {hint ? (
+                <span
+                  id={`dica-${item}`}
+                  role="tooltip"
+                  className="pointer-events-none absolute left-0 top-full z-10 mt-2 hidden whitespace-nowrap rounded-md border border-dark-border bg-dark-card px-3 py-2 text-xs text-dark-text group-focus-within:block group-hover:block"
+                >
+                  {hint}
+                </span>
+              ) : null}
+            </div>
+          );
+        })}
       </div>
       <p role="status" className="mb-4 font-mono text-xs text-dark-muted">
         {visible.length}{" "}
