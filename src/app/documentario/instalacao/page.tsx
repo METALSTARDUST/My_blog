@@ -21,6 +21,24 @@ const icons = simpleIcons as unknown as Record<string, { path: string }>;
 const hiddenButton =
   "inline-block cursor-pointer list-none select-none py-2 text-xs text-dark-muted/70 underline-offset-4 hover:text-sonic-cyan hover:underline focus-visible:text-sonic-cyan";
 
+const setupCards = [
+  {
+    id: "shadcn-create",
+    title: "Use o shadcn/create",
+    text: "Monte seu preset visualmente e gere um comando de configuração.",
+  },
+  {
+    id: "cli",
+    title: "Use a CLI",
+    text: "Crie a estrutura de um template compatível direto pelo terminal.",
+  },
+  {
+    id: "projeto-existente",
+    title: "Projeto existente",
+    text: "Adicione o shadcn/ui a um app que você já criou.",
+  },
+];
+
 export default function InstallationPage() {
   return (
     <article className="relative mx-auto max-w-5xl pb-32 pt-14">
@@ -42,12 +60,35 @@ export default function InstallationPage() {
         </p>
       </header>
 
+      <section aria-labelledby="escolha-comeco" className="mb-12">
+        <p id="escolha-comeco" className="mb-5 text-dark-muted">
+          Escolha o caminho que combina com o seu ponto de partida.
+        </p>
+        <ul className="grid gap-4 sm:grid-cols-3">
+          {setupCards.map((card) => (
+            <li key={card.id}>
+              <a
+                href={`#${card.id}`}
+                className="block h-full rounded-2xl border border-dark-border bg-dark-card p-6 transition-colors hover:border-sonic-cyan/50 focus-visible:border-sonic-cyan/50"
+              >
+                <span className="block font-medium text-dark-text">
+                  {card.title}
+                </span>
+                <span className="mt-2 block text-sm leading-relaxed text-dark-muted">
+                  {card.text}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section aria-labelledby="como-comecar" className="mb-12 space-y-8">
         <h2 id="como-comecar" className="text-2xl font-semibold">
           Como começar
         </h2>
 
-        <div className="space-y-3">
+        <div id="shadcn-create" className="scroll-mt-8 space-y-3">
           <h3 className="text-lg font-semibold">
             Use o shadcn/create{" "}
             <span className="text-sm font-normal text-dark-muted">
@@ -83,7 +124,7 @@ export default function InstallationPage() {
           </details>
         </div>
 
-        <div className="space-y-3">
+        <div id="cli" className="scroll-mt-8 space-y-3">
           <h3 className="text-lg font-semibold">Use a CLI</h3>
           <p className="max-w-2xl leading-relaxed text-dark-muted">
             Crie a estrutura inicial de um template compatível diretamente pelo
@@ -109,7 +150,7 @@ export default function InstallationPage() {
           <CommandTabs args="shadcn@latest init" />
         </div>
 
-        <div className="space-y-3">
+        <div id="projeto-existente" className="scroll-mt-8 space-y-3">
           <h3 className="text-lg font-semibold">Projeto existente</h3>
           <p className="max-w-2xl leading-relaxed text-dark-muted">
             Cada guia de framework tem uma seção <em>existing project</em> com

@@ -11,14 +11,15 @@ published: true
 
 Para um projeto novo, o caminho recomendado é o **shadcn/create**: você monta a configuração visualmente e ele gera o comando de configuração correto para o seu framework. Se preferir o terminal, a **CLI** cria a estrutura inicial de um template compatível diretamente por ele.
 
-```bash
-pnpm dlx shadcn@latest init -t [framework]
-npx shadcn@latest init -t [framework]
-yarn dlx shadcn@latest init -t [framework]
-bunx --bun shadcn@latest init -t [framework]
+```pm
+shadcn@latest init -t [framework]
 ```
 
-Para o **Laravel**, primeiro crie o aplicativo com `laravel new` e depois execute `npx shadcn@latest init`.
+Para o **Laravel**, primeiro crie o aplicativo com `laravel new` e depois execute o init dentro dele:
+
+```pm
+shadcn@latest init
+```
 
 Já tem um projeto sem shadcn? Eu recomendo colocar. Cada guia de framework tem uma seção _existing project_ com as etapas de configuração manual.
 
