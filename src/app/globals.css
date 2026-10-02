@@ -53,7 +53,7 @@
     list-style: decimal;
     padding-left: 1.5em;
   }
-  .prose pre {
+  .prose > pre {
     @apply rounded-lg border border-dark-border bg-dark-card p-5;
     overflow-x: auto;
     font-size: 0.875rem;
@@ -61,6 +61,10 @@
   .prose code {
     @apply text-sonic-cyan;
     font-size: 0.9em;
+  }
+  .prose .command-tabs code {
+    color: inherit;
+    font-size: inherit;
   }
   .prose blockquote {
     @apply border-l-2 border-sonic-cyan pl-5;

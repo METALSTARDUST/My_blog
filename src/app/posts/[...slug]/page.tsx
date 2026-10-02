@@ -1,10 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { isValidElement, type ReactNode } from "react";
+import { CommandTabs } from "@/components/CommandTabs";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPosts } from "@/lib/posts";
 import { formatDate } from "@/lib/date";
+
+// Blocos ```pm viram abas pnpm/npm/yarn/bun: o conteúdo é só o que vem depois
+// do prefixo (ex.: `shadcn@latest init`). Os demais blocos seguem normais.
+function CodeBlock({ children }: { children?: ReactNode }) {
+  const code = isValidElement<{ className?: string; children?: ReactNode }>(
+    children,
+  )
+    ? children
+    : null;
+  if (code?.props.className?.includes("language-pm")) {
+    return <CommandTabs args={String(code.props.children).trim()} />;
+  }
+  return <pre>{children}</pre>;
+}
 
 interface Props {
   params: { slug: string[] };
@@ -52,7 +68,9 @@ export default async function PostPage({ params }: Props) {
         </div>
       </header>
       <div className="prose">
-        <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
+        <Markdown remarkPlugins={[remarkGfm]} components={{ pre: CodeBlock }}>
+          {post.content}
+        </Markdown>
       </div>
       <footer className="mt-12 border-t border-dark-border pt-6 font-mono text-sm text-dark-muted">
         Save point registrado. Até a próxima fase.
