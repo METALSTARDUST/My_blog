@@ -5,6 +5,7 @@ import {
   componentsSource,
   documentaryComponents,
   documentaryIntroduction,
+  installationPath,
 } from "@/lib/documentario";
 
 export const metadata: Metadata = {
@@ -93,6 +94,14 @@ export default function ComponentsPage() {
           </ul>
         </section>
       ))}
+      <p className="mb-10">
+        <Link
+          href={installationPath}
+          className="text-sonic-cyan hover:underline"
+        >
+          Próxima página: Instalação →
+        </Link>
+      </p>
       <footer className="border-t border-dark-border pt-6 text-sm text-dark-muted">
         <h2 className="mb-3 font-semibold text-dark-text">Referências</h2>
         <a href={componentsSource} className="text-sonic-cyan underline">
