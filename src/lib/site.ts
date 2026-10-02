@@ -12,6 +12,7 @@ export const CATEGORIES = [
   "sql",
   "agropilot",
   "pessoal",
+  "shadcn",
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];
