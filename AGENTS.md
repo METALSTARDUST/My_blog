@@ -26,3 +26,9 @@ por Caio na issue/PR ou na conversa que originou a tarefa e o catálogo existent
   teclado e em tela pequena. Execute lint, formatação dos arquivos alterados e build.
 
 Essas regras devem ser verificadas em toda PR que altere o documentário.
+
+## Todo conteúdo novo é um registro
+
+Toda página ou conteúdo novo do documentário (mesmo no mesmo dia) deve ter um
+registro em `content/posts/shadcn/`, para aparecer nos filtros **Todos** e
+**Shadcn** da home. O registro resume o conteúdo e linka para a página completa.
