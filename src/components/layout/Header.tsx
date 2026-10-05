@@ -1,23 +1,22 @@
 ﻿import Link from "next/link";
-import { Zap } from "lucide-react";
+import { Github } from "lucide-react";
+
+import { REPO_URL } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="border-b border-dark-border">
+    <header>
       <nav
         aria-label="Navegação principal"
-        className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-5 px-5 py-6 sm:px-8"
+        className="mx-auto flex max-w-site flex-wrap items-center justify-between gap-5 px-5 py-6 sm:px-8"
       >
         <Link
           href="/"
           aria-label="Metal — início"
           className="flex items-center gap-3"
         >
-          <span className="rounded-lg border border-sonic-cyan/30 bg-sonic-cyan/10 p-2 text-sonic-cyan">
-            <Zap size={21} />
-          </span>
-          <span className="text-xl font-extrabold tracking-tight">
-            metal<span className="text-sonic-cyan">.log</span>
+          <span className="text-[17px] font-medium tracking-tight">
+            Metal&apos;s Blog
           </span>
         </Link>
         <div className="flex gap-6 text-sm text-dark-muted">
@@ -30,6 +29,13 @@ export function Header() {
           <Link href="/sobre/" className="hover:text-sonic-cyan">
             Sobre
           </Link>
+          <a
+            href={REPO_URL}
+            aria-label="GitHub"
+            className="hover:text-sonic-blue"
+          >
+            <Github size={18} />
+          </a>
         </div>
       </nav>
     </header>

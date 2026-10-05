@@ -3,9 +3,21 @@ title: "Título do aprendizado"
 date: "2026-09-30"
 tags: ["daily"]
 category: "pessoal"
+topics: []
 summary: "Uma frase sobre o que você vai encontrar neste registro."
 published: false
 ---
+
+<!--
+Para registrar um aprendizado com ajuda do agente, use /docs.
+category define a pasta principal; topics adiciona assuntos aos filtros.
+Para informar a origem, acrescente ao frontmatter:
+source:
+  name: "Nome do site ou da disciplina"
+  url: "https://endereco-da-fonte" # omita em aulas sem link
+O nome da origem aparece automaticamente como filtro e no final do post.
+Remova este comentário do registro publicado.
+-->
 
 ## O que fiz hoje
 

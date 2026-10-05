@@ -2,6 +2,14 @@
 
 Leia também `CLAUDE.md` antes de alterar o projeto.
 
+## Registrar aprendizados com /docs
+
+Ao receber `/docs`, `$docs` ou um pedido para registrar um aprendizado no diário,
+leia e siga `.agents/skills/docs/SKILL.md`. Sempre peça o relato e a origem antes
+de escrever; obtenha a data local automaticamente. Cada aprendizado cria um novo
+registro, salvo pedido explícito de edição. Assuntos e fontes são filtros do mesmo
+registro, sem duplicar conteúdo.
+
 ## Primeiro documentário — regra editorial obrigatória
 
 Antes de adicionar ou alterar conteúdo do documentário, confira o material enviado

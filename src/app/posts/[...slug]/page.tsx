@@ -72,6 +72,26 @@ export default async function PostPage({ params }: Props) {
           {post.content}
         </Markdown>
       </div>
+      {post.source ? (
+        <section
+          aria-label="Origem do aprendizado"
+          className="mt-10 text-sm text-dark-muted"
+        >
+          <h2 className="mb-2 font-semibold text-dark-text">
+            Origem do aprendizado
+          </h2>
+          {post.source.url ? (
+            <a
+              href={post.source.url}
+              className="text-sonic-cyan underline underline-offset-4"
+            >
+              {post.source.name}
+            </a>
+          ) : (
+            <p>{post.source.name}</p>
+          )}
+        </section>
+      ) : null}
       <footer className="mt-12 border-t border-dark-border pt-6 font-mono text-sm text-dark-muted">
         Save point registrado. Até a próxima fase.
       </footer>
