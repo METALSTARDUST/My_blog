@@ -12,6 +12,8 @@ export interface Post {
   summary: string;
   content: string;
   readingMinutes: number;
+  topics: string[];
+  source?: { name: string; url?: string };
 }
 
 export async function getPosts(): Promise<Post[]> {
@@ -27,7 +29,7 @@ export async function getPosts(): Promise<Post[]> {
               await readFile(path.join(directory, name), "utf8"),
             );
             if (data.published === false) return null;
-            const { title, date, tags, summary } = data;
+            const { title, date, tags, summary, topics = [], source } = data;
             if (
               typeof title !== "string" ||
               !title.trim() ||
@@ -38,7 +40,23 @@ export async function getPosts(): Promise<Post[]> {
               new Date(date).toISOString().slice(0, 10) !== date ||
               data.category !== category ||
               !Array.isArray(tags) ||
-              !tags.every((tag): tag is string => typeof tag === "string")
+              !tags.every((tag): tag is string => typeof tag === "string") ||
+              !Array.isArray(topics) ||
+              !topics.every(
+                (topic): topic is string =>
+                  typeof topic === "string" && topic.trim().length > 0,
+              ) ||
+              (source !== undefined &&
+                (source === null ||
+                  typeof source !== "object" ||
+                  typeof source.name !== "string" ||
+                  !source.name.trim() ||
+                  (source.url !== undefined &&
+                    (typeof source.url !== "string" ||
+                      !URL.canParse(source.url) ||
+                      !["https:", "http:"].includes(
+                        new URL(source.url).protocol,
+                      )))))
             ) {
               throw new Error(
                 `Frontmatter inválido em ${category}/${name}. Confira content/template.md.`,
@@ -51,6 +69,8 @@ export async function getPosts(): Promise<Post[]> {
               tags,
               summary,
               category,
+              topics,
+              ...(source !== undefined ? { source } : {}),
               content,
               readingMinutes: Math.max(
                 1,

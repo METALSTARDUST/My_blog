@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0e14",
+  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main
           id="conteudo"
-          className="mx-auto w-full max-w-6xl flex-1 px-5 sm:px-8"
+          className="mx-auto w-full max-w-site flex-1 px-5 sm:px-8"
         >
           {children}
         </main>
